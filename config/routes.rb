@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get '/users/:id/edit' => 'users#edit', as: 'edit_user'
   patch '/users/:id' => 'users#update'
 
-  get '/campsites/:id' => 'locations#show', as: 'location'
+  get '/campsites' => 'campsites#index', as: 'campsite'
+  get '/campsites/:id' => 'campsites#show', as: 'campsite'
   get '/campsites/:id/reviews/new' => 'reviews#new', as: 'new_review'
   post '/campsites/:id/reviews' => 'reviews#create', as: 'create_review'
 
