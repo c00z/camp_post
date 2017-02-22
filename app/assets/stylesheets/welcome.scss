@@ -1,3 +1,25 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.home-img {
+  // position: relative;
+  background-image: url("cameron.jpg");
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.home-gif {
+  // position: relative;
+  background-image: url("fire.gif");
+  max-width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
