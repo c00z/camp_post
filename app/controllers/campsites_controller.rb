@@ -7,9 +7,7 @@ class CampsitesController < ApplicationController
   def index
   wiki_url = "https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States"
   page = Nokogiri::HTML(open(wiki_url))
-    @campsites = page.css("tr").each do |el|
-     puts el.text
-    end
+  @campsites = page.css("tr th a").text
   end
 
 
@@ -19,3 +17,5 @@ class CampsitesController < ApplicationController
   end
 
 end
+
+# campsite.save, break into array for space.
