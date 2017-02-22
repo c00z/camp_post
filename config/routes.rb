@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-
+  get '/users/:id' => 'users#show', as: 'user'
+  
   devise_scope :user do
   get 'login', to: 'devise/sessions#new'
   get 'signup', to: 'devise/registrations#new'
