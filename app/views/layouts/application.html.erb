@@ -9,31 +9,35 @@
   </head>
 
   <body>
-<nav id="navbar">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">&nbsp;CAMP_POST</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <% if user_signed_in? %>
-        <li>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        </li>
-        <li>
-        <%= link_to('Profile', user_path(current_user)) %>
-        </li>
-      <% else %>
-        <li>
-        <%= link_to('Sign up', signup_path)  %>
-        </li>
-        <li>
-        <%= link_to('Login', login_path)  %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+  <nav id="navbar">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">&nbsp;CAMP_POST</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <% if user_signed_in? %>
+            <li>
+            <%= link_to('Profile', user_path(current_user)) %>
+            </li>
+            <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            </li>
+          <% else %>
+            <li>
+            <%= link_to('Login', login_path)  %>
+            </li>
+            <li>
+              <%= link_to('Sign up', signup_path)  %>
+            </li>
+          <% end %>
+      </ul>
+    </div>
+  </nav>
 
+<div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+</div>
+
+
   </body>
 </html>
