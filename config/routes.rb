@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/reviews/:id/edit' => 'reviews#edit', as: 'edit_review'
   patch '/reviews/:id' => 'reviews#update'
   delete '/reviews/:id' => 'reviews#destroy'
-  
+
   devise_scope :user do
   get 'login', to: 'devise/sessions#new'
   get 'signup', to: 'devise/registrations#new'
