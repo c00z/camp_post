@@ -1,5 +1,8 @@
 <!-- CAMPSITES INDEX -->
-
+<div class="container">
 <h1>Checkout all my campsites</h1>
 
- <p><%= @campsite_array.join("\n") %></p>
+<% @campsite_array.each do |el| %>
+  <p><%= el %></p>
+<% end %>
+</div>
