@@ -1,0 +1,24 @@
+<!-- Edit User Profile -->
+
+
+   <div class="row">
+         <br>
+         <br>
+       <div class="col s6 push-s3">
+         <h4>Edit Profile</h4>
+         <%= form_for @user do |f| %>
+        <div>
+          <%= f.text_field :username, placeholder: "Username", id:"form" %>
+        </div>
+        
+        <div>
+          <%= f.text_field :email, placeholder: "Email", id:"form" %>
+        </div>
+
+        <br>
+        <div class="col s6 push-s4">
+          <a class="waves-effect waves-light btn"><%= f.submit "Save" %></a>
+        </div>
+        <% end %>
+    </div>
+  </div>

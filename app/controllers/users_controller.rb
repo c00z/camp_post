@@ -18,11 +18,22 @@ class UsersController < ApplicationController
 
 
   def edit
-
+    user_id = params[:id]
+    @user = User.find_by_id(user_id)
+    # render :edit
   end
 
   def update
+    user_id = params[:id]
+    @user = User.find(user_id)
+    if @user.update_attributes(user_params)
+      flash[:notice] = "Updated successfully."
+      redirect_to @user
+    else
+        flash[:error] = "nondescriptive unhelpful flash"
 
+      redirect_to edit_user_path(@user)
+    end
   end
 
   private
