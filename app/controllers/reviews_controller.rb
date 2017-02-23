@@ -25,7 +25,19 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    review_id = params[:id]
+    @review = Review.find(review_id)
 
+    if @review.update_attributes(post_params)
+      flash[:notice] = "Updated successfully."
+      @campsite = Review.find_by_id(params[:id]).campsite
+      redirect_to campsite_path(@campsite)
+    else
+      @review.errors.full_messages.each do |message|
+        flash[:error] = message
+      end
+      redirect_to edit_review_path(@review)
+    end
   end
 
   def destroy
