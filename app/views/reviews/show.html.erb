@@ -1,0 +1,14 @@
+<!-- Show One Review -->
+  <div class="row">
+    <br>
+    <div class="col s8">
+      <h2><%= @review.title %></h2>
+      <h4>By <%= link_to "#{@review.user.email}", user_path(@review.user) %></h4>
+      <p><%= @review.description %></p>
+
+      <% if current_user == @review.user %>
+      <p><%= link_to "edit ", edit_review_path(@review),  :class => 'waves-effect waves-light btn' %>
+      <%= link_to "delete", review_path(@review), method: :delete, data: { confirm: "Are you sure?" }, :class => 'waves-effect waves-light btn red delete' %></p>
+      <% end %>
+    </div>
+  </div>
