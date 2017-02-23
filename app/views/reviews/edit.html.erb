@@ -1,7 +1,7 @@
 <!-- EDIT Reviews -->
 
   <h2><%= @review.title %></h2>
-  <h4>By <%= link_to "#{@review.user.email}", user_path(current_user) %></h4>
+  <h4>By <%= link_to "#{@review.user.username}", user_path(current_user) %></h4>
 
 
   <div class="row">

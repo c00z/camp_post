@@ -1,3 +1,5 @@
+<!-- Show one campsite -->
+
 <h1> <%= @campsites.name %></h1>
 
 
@@ -16,7 +18,7 @@
       <div class="row hoverable">
         <div class="col s7 offset-s1">
           <h4><%= link_to "#{p.title}", review_path(p), class:"review-title"%></h3>
-          <h5>Written by <%= p.user.email %> on <%=p.created_at.strftime("%b %d, %Y")%></h5>
+          <h5>Written by <%= p.user.username %> on <%=p.created_at.strftime("%b %d, %Y")%></h5>
           <p><%= truncate p.description, length: 160  %></p>
         </div>
       </div>
