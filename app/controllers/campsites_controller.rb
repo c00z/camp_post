@@ -7,7 +7,12 @@ class CampsitesController < ApplicationController
   def index
   wiki_url = "https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States"
   page = Nokogiri::HTML(open(wiki_url))
-  @campsites = page.css("tr th a").text
+  campsites = page.css("tr th a")
+  @campsite_array = []
+  campsites.map do |a|
+    campsite_name = a.text
+    @campsite_array.push(campsite_name)
+  end
   end
 
 
