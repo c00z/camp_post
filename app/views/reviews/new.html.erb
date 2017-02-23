@@ -1,6 +1,5 @@
 <!-- ADD A NEW POST -->
 
-<div class="container">
   <div class="row">
     <br>
     <br>
@@ -8,18 +7,14 @@
       <h3>New Review about <%= @campsite.name %></h3>
       <%= form_for [@campsite, @review], url: create_review_path do |f| %>
       <div>
-        <%= f.text_field :title, placeholder: " Title", id:"form" %>
+        <%= f.text_field :title, placeholder: "Title", id:"form" %>
       </div>
       <div>
-        <%= f.text_area :content, placeholder: " Content", class: "materialize-textarea", id:"form" %>
+        <%= f.text_area :content, placeholder: "Content", class: "materialize-textarea", id:"form" %>
       </div>
         <% end %>
       </div>
       <div class="col s6 push-s4">
         <a class="waves-effect waves-light btn"><%= f.submit "Submit"%></a>
       </div>
-        <% end %>
-    </div>
-    </div>
-  </div>
-</div>
+      
