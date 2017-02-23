@@ -1,6 +1,6 @@
 <!-- USER PROFILE -->
 
-<h4>Welcome, <%= @user.username %>!</h4>
+<h4><%= @user.username %></h4>
 <h6>email: <%= @user.email %></h6>
 <h6>Reviews: <%= @user.reviews.length %></h6>
 <h6>Member Since:</strong> &nbsp; <%= @user.created_at.strftime("%b %Y") %></h6>

@@ -4,16 +4,17 @@
 
 
 body {
-  // background-color: black;
-  // color: white;
+  background-color: black;
+  color: white;
 }
 
 .home-img {
-  // position: relative;
-  background-image: url("cameron.jpg");
-  width: 200px;
-  height: 200px;
-  margin-top: 20px;
+  background-image: url("julian.jpg");
+  width: 100%;
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .home-gif {
@@ -21,5 +22,6 @@ body {
   background-image: url("fire.gif");
   max-width: 100%;
   height: 200px;
-  margin-top: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
