@@ -10,7 +10,19 @@ class ReviewsController < ApplicationController
   end
 
   def create
-
+    new_review = Review.new(post_params)
+    @campsite = Campsite.find_by_id(params[:id])
+    new_review.user = current_user
+    new_review.campsite = @campsite
+    @review = new_review.save
+    if @review
+      redirect_to @campsite
+    else
+      new_review.errors.full_messages.each do |message|
+        flash[:error] = message
+      end
+       redirect_to new_review_path
+     end
   end
 
   def new
