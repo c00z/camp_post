@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222214518) do
+ActiveRecord::Schema.define(version: 20170223223634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20170222214518) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "campsites_users", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "campsite_id"
+    t.index ["campsite_id"], name: "index_campsites_users_on_campsite_id", using: :btree
+    t.index ["user_id"], name: "index_campsites_users_on_user_id", using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -54,6 +63,8 @@ ActiveRecord::Schema.define(version: 20170222214518) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "campsites_users", "campsites"
+  add_foreign_key "campsites_users", "users"
   add_foreign_key "reviews", "campsites"
   add_foreign_key "reviews", "users"
 end

@@ -1,0 +1,2 @@
+class AddsForiegntoCampsiteUser < ApplicationRecord
+end
