@@ -10,12 +10,16 @@ class CampsitesController < ApplicationController
     campsites = page.css("tr th a")
     @campsite_array = []
     campsites.map do |a|
-    campsite_name = a.text
-    @campsite_array.push(campsite_name)
+      campsite_name = a.text
+      @campsite_array.push(campsite_name)
     end
-      @campsite_array.each do |el|
+    @campsite_array[4...63].each do |el|
       puts el
-      el = el.gsub!(/[!@%&♠]/,'')
+      p "THIS IS ELLLLL"
+      p el
+      natpark = Campsite.new(name: el)
+      # el = el.gsub!(/[!@%&♠]/,'')
+      natpark.save
     end
   end
 
