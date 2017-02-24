@@ -15,6 +15,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  margin-top: -15px;
 }
 
 .home-gif {
@@ -24,4 +25,12 @@ body {
   height: 200px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#herotext {
+  text-align: right;
+  padding-top: 200px;
+  padding-right: 80px;
+  margin: 0;
+  font-size: 70px;
 }
