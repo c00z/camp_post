@@ -15,7 +15,7 @@ class CampsitesController < ApplicationController
     end
       @campsite_array.each do |el|
       puts el
-      el = el.gsub!(/[!@%&"]/,'')
+      el = el.gsub!(/[!@%&♠]/,'')
     end
   end
 
