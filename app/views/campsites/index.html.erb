@@ -2,8 +2,8 @@
 <div class="container">
 <h1>Checkout all my campsites</h1>
 
-<% @campsite_array[4...63].each do |el| %>
-  <h5><%= link_to "#{el}" %></h5>
+<% @campsites[0...63].each do |p| %>
+  <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
 <% end %>
 </div>
 

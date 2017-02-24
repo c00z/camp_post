@@ -19,6 +19,7 @@ class CampsitesController < ApplicationController
       p el
       # creates unique campsite name in DB
       natpark = Campsite.find_or_create_by(name: el)
+      @campsites = Campsite.all
       # el = el.gsub!(/[!@%&♠]/,'')
       # natpark.save
     end
