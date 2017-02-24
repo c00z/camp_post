@@ -6,9 +6,47 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
   </head>
 
   <body>
+  <nav id="navbar">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">&nbsp;CAMP-POST</a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+            <%= link_to('Campsites', campsites_path) %>
+            </li>
+              <% if user_signed_in? %>
+            <li>
+            <%= link_to('Profile', user_path(current_user)) %>
+            </li>
+            <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            </li>
+          <% else %>
+            <li>
+            <%= link_to('Login', login_path)  %>
+            </li>
+            <li>
+              <%= link_to('Sign up', signup_path)  %>
+            </li>
+          <% end %>
+      </ul>
+    </div>
+  </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+
+
+
   </body>
 </html>

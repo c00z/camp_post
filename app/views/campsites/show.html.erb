@@ -1,0 +1,40 @@
+<!-- Show one campsite -->
+
+<h1> <%= @campsites.name %></h1>
+
+  <!-- BOOKMARK -->
+  <% if !current_user %>
+    <%= form_for([@campsites, @campsites.user.build]) do |f| %>
+    <%= f.submit "Bookmark", class: "btn btn-danger pic-large" %>
+   <% end %>
+  <% else %>
+    <%= form_for([@campsites, @campsites.users.build]) do |f| %>
+    <% f.hidden_field :user_id, value: current_user.id %>
+    <% if @campsites.users.include? current_user %>
+      <%= f.submit "Woo!!", class: "btn btn-danger pic-large", disabled: "true" %>
+      <% else %>
+        <%= f.submit "Bookmark!", class: "btn btn-danger pic-large" %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+
+  <!-- Add new Review -->
+  <div class="col m2 offset-m1">
+    <div class="row">
+      <h4 class="col s12 adventure-text">Tell us your <%=@campsites.name%> story!</h4>
+    </div>
+    <div class="row">
+      <%= link_to "New Review", new_review_path(@campsites), class:"btn col s12 button-color"%>
+    </div>
+
+<!-- Review lists -->
+<% @campsites.reviews.each do |p| %>
+      <div class="row hoverable">
+        <div class="col s7 offset-s1">
+          <h4><%= link_to "#{p.title}", review_path(p), class:"review-title"%></h3>
+          <h5>Written by <%= p.user.username %> on <%=p.created_at.strftime("%b %d, %Y")%></h5>
+          <p><%= truncate p.description, length: 160  %></p>
+        </div>
+      </div>
+      <% end %>

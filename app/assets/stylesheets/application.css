@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require materialize
  */
+
+
+#navbar {
+   background-color: black;
+ }
+
+body {
+  
+}

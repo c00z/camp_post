@@ -1,0 +1,20 @@
+<!-- ADD A NEW POST -->
+
+  <div class="row">
+    <br>
+    <br>
+  <div class="col s8 push-s1">
+      <h3>New Review about <%= @campsite.name %></h3>
+      <%= form_for [@campsites, @review], url: create_review_path do |f| %>
+      <div>
+        <%= f.text_field :title, placeholder: "Title", id:"form" %>
+      </div>
+      <div>
+        <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea"%>
+      </div>
+      </div>
+      <div class="col s6 push-s4">
+        <a class="waves-effect waves-light btn"><%= f.submit "Submit"%></a>
+      </div>
+        <% end %>
+    </div>
