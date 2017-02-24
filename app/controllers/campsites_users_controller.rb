@@ -1,6 +1,6 @@
 class CampsitesUsersController < ApplicationController
 
-  before_action :require_login, only: [:build]
+  # before_action :require_login, only: [:build]
 
   def build
     @campsite = Campsite.find_by_id((params[:id]))
