@@ -4,7 +4,7 @@
 
   <!-- BOOKMARK -->
   <% if !current_user %>
-    <%= form_for([@campsites, @campsites.user.build]) do |f| %>
+    <%= form_for([@campsites, @campsites.users.build]) do |f| %>
     <%= f.submit "Bookmark", class: "btn btn-danger pic-large" %>
    <% end %>
   <% else %>

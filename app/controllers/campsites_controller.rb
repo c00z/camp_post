@@ -17,9 +17,9 @@ class CampsitesController < ApplicationController
       puts el
       p "THIS IS ELLLLL"
       p el
-      natpark = Campsite.new(name: el)
+      natpark = Campsite.find_or_create_by(name: el)
       # el = el.gsub!(/[!@%&♠]/,'')
-      natpark.save
+      # natpark.save
     end
   end
 
