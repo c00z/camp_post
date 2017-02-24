@@ -3,7 +3,7 @@
 <h1>Checkout all my campsites</h1>
 
 <% @campsite_array[4...63].each do |el| %>
-  <p><%= el %></p>
+  <h5><%= link_to "#{el}" %></h5>
 <% end %>
 </div>
 
