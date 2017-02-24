@@ -25,3 +25,13 @@
     </div>
     <% end %>
   </div>
+
+<div class="row">
+        <h2>Saved Campsites</h2>
+          <% @user.campsites.each do |p| %>
+          <div>
+            <h4><%= link_to "#{p.campsites_users}", campsite_path(p)%></h4>
+            <p><%=p.created_at.strftime("%b %d, %Y")%></p>
+          </div>
+          <% end %>
+      </div>
