@@ -30,7 +30,7 @@
           <%= f.submit "Bookmark", class: "btn btn-danger pic-large" %>
         <% end %>
       <% else %>
-        <%= form_for([@campsites, @campsites.user.build]) do |f| %>
+        <%= form_for([@campsites, @campsites.users.build]) do |f| %>
           <% f.hidden_field :user_id, value: current_user.id %>
           <% if @campsites.users.include? current_user %>
             <%= f.submit "Woo!!", class: "btn btn-danger pic-large", disabled: "true" %>
