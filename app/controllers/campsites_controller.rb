@@ -22,6 +22,7 @@ class CampsitesController < ApplicationController
 
   def show
     @campsites = Campsite.find_by_id(params[:id])
+    @user = User.all
     # render :show
   end
 
