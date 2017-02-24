@@ -2,9 +2,6 @@
 
 <h1> <%= @campsites.name %></h1>
 
-
-
-
   <!-- BOOKMARK -->
   <% if !current_user %>
     <%= form_for([@campsites, @campsites.user.build]) do |f| %>

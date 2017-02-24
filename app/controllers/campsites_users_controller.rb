@@ -4,8 +4,9 @@ class CampsitesUsersController < ApplicationController
 
   def build
     @campsite = Campsite.find_by_id((params[:id]))
+    p @campsite
     @user = current_user
-    @campsites.user << @user
+    @campsites.users << @user
     redirect_to :back
   end
 
