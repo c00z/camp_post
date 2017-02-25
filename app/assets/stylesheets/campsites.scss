@@ -1,3 +1,18 @@
 // Place all the styles related to the campsites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#limheight {
+    height: 800px;
+    -webkit-column-count: 5;
+    -moz-column-count: 3;
+    column-count: 3; /*3 is just placeholder -- can be anything*/
+}
+
+#limheight h5 {
+    text-decoration: none !important;
+    display: inline-block;
+    padding-bottom: 20px;
+    
+}
