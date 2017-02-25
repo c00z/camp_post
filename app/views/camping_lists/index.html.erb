@@ -1,0 +1,10 @@
+<!-- USERS CAMPING LIST -->
+<div class="container">
+
+  <div id="camping_list">
+    <% @user.camping_lists.each do |p| %>
+    <li><%= "#{p.item}"%></li>
+    <% end %>
+  </div>
+
+</div>
