@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170225230117) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.float    "location"
+    t.string   "location"
   end
 
   create_table "campsites_users", force: :cascade do |t|
