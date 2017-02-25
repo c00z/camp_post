@@ -1,7 +1,8 @@
 class CampingListsController < ApplicationController
 
 def index
-  @camping_lists = CampingList.all
+  @user = User.find(params[:id])
+  @camping_lists = @user.camping_lists
 end
 
 
