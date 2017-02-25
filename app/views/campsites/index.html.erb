@@ -4,6 +4,7 @@
   <div class="col s12" id= "limheight">
     <% @campsites[0...63].each do |p| %>
       <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
+      <br>
     <% end %>
   </div>
 </div>
