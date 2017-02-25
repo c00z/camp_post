@@ -32,7 +32,7 @@
         <h4>Saved Campsites</h4>
         <% @user.campsites.each do |p| %>
         <div>
-          <h4><%= link_to "#{p.campsites_users}", campsite_path(p)%></h4>
+          <h4><%= link_to "#{p.name}", campsite_path(p)%></h4>
           <p>Bookmarked on: <%=p.created_at.strftime("%b %d, %Y")%></p>
         </div>
         <% end %>
