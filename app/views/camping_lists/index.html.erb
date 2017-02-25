@@ -1,5 +1,6 @@
 <!-- USERS CAMPING LIST -->
-
-<% @user.camping_lists.each do |p| %>
-    <li><%= "#{p.item}"%></li>
-  <% end %>
+<div class="container">
+  <% @user.camping_lists.each do |p| %>
+      <li><%= "#{p.item}"%></li>
+    <% end %>
+</div>
