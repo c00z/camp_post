@@ -24,6 +24,21 @@ class CampsitesController < ApplicationController
       # natpark.save
     end
 
+    # SCRAPING NATIONAL LOCATION
+    locations = page.css("tr td small span a span span span.geo-dec")
+    @locations_array = []
+    locations.map do |el|
+      campsite_loc = el.text
+      @locations_array.push(campsite_loc)
+    end
+    @locations_array.each do |x|
+      p "THIS IS LOCATIONNNN"
+      p x
+      natpark_loc = Campsite.find_or_create_by(location: x)
+    end
+
+
+
   def index
     @campsites = Campsite.all
   end
