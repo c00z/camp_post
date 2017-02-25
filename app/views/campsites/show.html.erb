@@ -1,10 +1,10 @@
 <!-- Show one campsite -->
-
-<h1> <%= @campsites.name %></h1>
+<div class="container">
+  <h1> <%= @campsites.name %></h1>
 
   <!-- BOOKMARK -->
   <% if !current_user %>
-    <%= form_for([@campsites, @campsites.user.build]) do |f| %>
+    <%= form_for([@campsites, @campsites.users.build]) do |f| %>
     <%= f.submit "Bookmark", class: "btn btn-danger pic-large" %>
    <% end %>
   <% else %>
@@ -28,8 +28,8 @@
       <%= link_to "New Review", new_review_path(@campsites), class:"btn col s12 button-color"%>
     </div>
 
-<!-- Review lists -->
-<% @campsites.reviews.each do |p| %>
+  <!-- Review lists -->
+  <% @campsites.reviews.each do |p| %>
       <div class="row hoverable">
         <div class="col s7 offset-s1">
           <h4><%= link_to "#{p.title}", review_path(p), class:"review-title"%></h3>
@@ -37,4 +37,5 @@
           <p><%= truncate p.description, length: 160  %></p>
         </div>
       </div>
-      <% end %>
+    <% end %>
+  </div>

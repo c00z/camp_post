@@ -2,7 +2,10 @@
 <div class="container">
 <h1>Checkout all my campsites</h1>
 
-<% @campsite_array[1...60].each do |el| %>
-  <p><%= el %></p>
+<% @campsites[0...63].each do |p| %>
+  <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
 <% end %>
 </div>
+
+
+<!-- @natpark.name -->

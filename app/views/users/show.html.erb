@@ -14,29 +14,53 @@
     </div>
       <br>
 
-    <div class="col s6">
-      <h4>Your Reviews</h4>
-        <div class="col s8">
-          <% @user.reviews.each do |p| %>
-          <div class="row hoverable posts-background">
-            <div class="col s10">
-              <h4><%= link_to "#{p.title}", review_path(p)%></h4>
-              <p><%=p.created_at.strftime("%b %d, %Y")%></p>
-              <p style="margin-bottom: 40px;"><%= truncate p.description, length: 160 %></p>
-            </div>
-          </div>
-          <% end %>
-        </div>
-        <!-- Bookmarks -->
-        <div class="col s8">
-        <h4>Saved Campsites</h4>
-        <% @user.campsites.each do |p| %>
-        <div>
-          <h4><%= link_to "#{p.campsites_users}", campsite_path(p)%></h4>
-          <p>Bookmarked on: <%=p.created_at.strftime("%b %d, %Y")%></p>
-        </div>
-        <% end %>
-      </div>
+    <div class="col s10">
+      <div class="card">
+         <div class="card-content profile-gif">
+           <!-- <img src="./images/fire.gif"> -->
+         </div>
+         <div class="card-tabs">
+           <ul class="tabs tabs-fixed-width">
+             <li class="tab"><a href="#reviews">Reviews</a></li>
+             <li class="tab"><a class="active" href="#bookmarks">Bookmarks</a></li>
+             <li class="tab"><a href="#camping_list">Camping List</a></li>
+           </ul>
+         </div>
+
+         <div class="card-content grey lighten-4">
+           <div id="reviews">
+             <p>my reviews </p>
+             <% @user.reviews.each do |p| %>
+             <div class="row hoverable posts-background">
+               <div class="col s10">
+                 <h4><%= link_to "#{p.title}", review_path(p)%></h4>
+                 <p><%=p.created_at.strftime("%b %d, %Y")%></p>
+                 <p style="margin-bottom: 40px;"><%= truncate p.description, length: 160 %></p>
+               </div>
+             </div>
+             <% end %>
+
+           </div>
+
+           <div id="bookmarks">
+             <p>my bookmarks </p>
+             <% @user.campsites.each do |p| %>
+             <div>
+               <h4><%= link_to "#{p.name}", campsite_path(p)%></h4>
+               <p><%=p.created_at.strftime("%b %d, %Y")%></p>
+             </div>
+             <% end %>
+
+           </div>
+
+           <div id="camping_list">
+             <% @user.camping_lists.each do |p| %>
+             <li><%= "#{p.item}"%></li>
+             <% end %>
+           </div>
+         </div>
+       </div>
+
     </div>
 
 
