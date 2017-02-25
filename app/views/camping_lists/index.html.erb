@@ -1,6 +1,5 @@
-<p>test</p>
+<!-- USERS CAMPING LIST -->
 
 <% @user.camping_lists.each do |p| %>
-    <h4><%= "#{p.item}"%></h4>
-    <p><%=p.created_at.strftime("%b %d, %Y")%></p>
+    <li><%= "#{p.item}"%></li>
   <% end %>
