@@ -24,6 +24,25 @@ class CampsitesController < ApplicationController
       # natpark.save
     end
 
+    # SCRAPING NATIONAL PARK IMAGE
+    campsites_img = page.css("tr td a.image img")
+    @img_array = []
+      campsites_img.map do |z|
+        p "THIS IS IMG"
+        p campsites_img
+        image = z
+
+        @img_array.push(image)
+      end
+
+    @img_array.each do |img|
+      puts img
+    end
+
+
+
+
+
   def index
     @campsites = Campsite.all
   end

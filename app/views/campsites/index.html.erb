@@ -2,10 +2,14 @@
 <div class="container">
 <h1>Checkout all my campsites</h1>
 
+<!-- @natpark.name -->
+
 <% @campsites[0...63].each do |p| %>
   <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
 <% end %>
 </div>
 
+<% @img_array.each do |img| %>
 
-<!-- @natpark.name -->
+  <img src="<%= img %>" alt="">
+<%end%>
