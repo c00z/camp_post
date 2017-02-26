@@ -9,6 +9,10 @@ class CampingListsController < ApplicationController
     @camping_lists = CampingList.create(list_params)
   end
 
+  def new
+
+  end
+
 
   private
   def list_params
