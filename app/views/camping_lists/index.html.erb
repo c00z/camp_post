@@ -7,4 +7,18 @@
     <% end %>
   </div>
 
+
+  <%= form_for [@camping_lists, @user], do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: "Title", id:"form" %>
+  </div>
+  <div>
+    <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea"%>
+  </div>
+  </div>
+  <div class="col s6 push-s4">
+    <a class="waves-effect waves-light btn"><%= f.submit "Submit"%></a>
+  </div>
+    <% end %>
+
 </div>
