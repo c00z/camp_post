@@ -16,9 +16,9 @@ class CampsitesController < ApplicationController
 
 
           campsites.each do |c|
-            park = {"name": nil, "location": nil}
-            park.name = c
-            park.location = locations[0]
+            park = {name: nil, location: nil}
+            park["name"] = c
+            park["location"] = locations[0]
             @campsite_array << park
           end
 
@@ -26,9 +26,9 @@ class CampsitesController < ApplicationController
           @campsite_array.each do |x|
            p "THIS IS NEW THINGSSSS"
            p x
-           natpark_loc = Campsite.find_or_create_by(name:x.name) do |z|
-             z.location = x.location
-           end
+           natpark_loc = Campsite.find_or_create_by(name:x["name"])
+             natpark_loc["location"] = x["location"]
+             natpark_loc.save
          end
 
     #
