@@ -3,11 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  // background-color: black;
-  // color: white;
-}
-
 .home-img {
   background-image: url("julian.jpg");
   width: 100%;
@@ -28,6 +23,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 90px;
+}
+
+.homebackground {
+  background-color: black;
+  color: white;
 }
 
 #herotext {
