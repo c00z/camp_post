@@ -2,9 +2,10 @@
 
 <div class="container">
   <div class="col s12" id= "limheight">
-    <% will_paginate @campsites[0...63].each do |p| %>
+    <%  @campsites[0...63].each do |p| %>
       <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
       <br>
     <% end %>
   </div>
+    <%= will_paginate  %>
 </div>
