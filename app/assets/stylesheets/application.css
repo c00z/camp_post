@@ -20,6 +20,12 @@
    background-color: black;
  }
 
-body {
+#signuppage {
+  background-image: url(mountains.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  margin-top: -25px;
 
 }
