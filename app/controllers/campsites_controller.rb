@@ -42,6 +42,7 @@ class CampsitesController < ApplicationController
 
   def index
     @campsites = Campsite.all
+    @campsites = @campsites.paginate(:page => params[:page], :per_page => 30)
   end
 
 
