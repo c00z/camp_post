@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .campsiteindex-img {
-  background-image: url("mountains.jpg");
+  background-image: url("forest.png");
   width: 100%;
-  height: 700px;
+  height: 800px;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -14,10 +14,23 @@
   text-decoration: none!important;
 }
 
+h5 {
+  // margin-top: 50px;
+  padding: 2px;
+}
+
+.pagination {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none!important;
+  color: white;
+  font-family: 'Bree Serif', serif;
+  text-shadow: 2px 2px 4px #000000;
+}
 
 #limheight {
-    margin-top: 70px;
-    height: 700px;
+    margin-top: 90px;
+    height: 600px;
     -webkit-column-count: 5;
     -moz-column-count: 3;
     column-count: 4; /*3 is just placeholder -- can be anything*/
@@ -29,14 +42,11 @@
     position: relative;
     // left: 10%;
     border-color: blacks;
-    border-width: 25px;
-    // -moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-    border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+    border-width: 4px;
     border-style: solid;
     margin: 0 auto;
     width: 90%;
     background-color: white;
-
 }
 
 a {
