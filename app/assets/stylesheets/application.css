@@ -37,9 +37,19 @@ a {
   text-decoration: none!important;
 }
 
+/*sigup page box*/
 #loginform {
   background-color: white;
-  margin: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  top: 28%;
+  left: 25%;
+  position: absolute;
+  width: 550px;
+  height: 600px;
+  z-index: 15;
+  margin: -100px 0 0 -150px;
 }
 
 #Loginpagebackground {
@@ -51,6 +61,7 @@ a {
   margin-top: -25px;
 }
 
+/*login page box*/
 #loginpage {
   background-color: white;
   border: 2px solid black;
