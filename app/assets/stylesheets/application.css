@@ -33,3 +33,8 @@
 a {
   text-decoration: none!important;
 }
+
+#loginform {
+  background-color: white;
+  margin: 30px;
+}
