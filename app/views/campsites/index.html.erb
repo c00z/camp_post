@@ -8,6 +8,11 @@
     <%= text_field_tag :search, params[:search], placeholder: "Search Parks" %>
     <%= submit_tag "Search", class: "btn btn-danger pic-large" %>
     <% end %>
+    <% if @campsites.present? %>
+    <!-- <%=  @campsites %> -->
+    <% else %>
+      <p>There are no campsites containing the term(s) <%= params[:search] %>.</p>
+    <% end %>
   </div>
 
 
