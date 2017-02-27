@@ -19,16 +19,29 @@
   // position: relative;
   background-image: url("fire.gif");
   max-width: 100%;
-  height: 320px;
+  height: 270px;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 90px;
+  margin-top:50px;
 }
 
 .homebackground {
   background-color: black;
   color: white;
 }
+
+.home-img2 {
+  background-image: url("cameron.jpg");
+  width: 100%;
+  height: 450px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-top: -15px;
+  font-family: 'Bree Serif', serif;
+  text-shadow: 4px 4px 6px #000000;
+}
+
 
 #herotext {
   text-align: right;
