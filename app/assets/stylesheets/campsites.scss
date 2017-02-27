@@ -5,10 +5,30 @@
 
 #limheight {
     margin-top: 70px;
-    height: 600px;
+    height: 700px;
     -webkit-column-count: 5;
     -moz-column-count: 3;
     column-count: 4; /*3 is just placeholder -- can be anything*/
+    box-sizing: border-box;
+    /*border-radius: 25%;*/
+   // 	border: 5px solid #000;
+   	/*background: #000;*/
+    display: block;
+    position: relative;
+    // left: 10%;
+    border-color: blacks;
+    border-width: 25px;
+    // -moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+    border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+    border-style: solid;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 #limheight h5 {
@@ -16,6 +36,7 @@
     display: inline-block;
     padding-bottom: 20px;
 }
+
 
 #limheight h5:hover {
   background-color: grey;
