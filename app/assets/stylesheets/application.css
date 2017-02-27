@@ -15,6 +15,9 @@
  *= require materialize
  */
 
+nav li a {
+  font-size: 25px!important;
+}
 
 #navbar {
    background-color: black;
