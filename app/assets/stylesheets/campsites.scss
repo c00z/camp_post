@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.campsiteindex-img {
+  background-image: url("mountains.jpg");
+  width: 100%;
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-top: -15px;
+  font-family: 'Bree Serif', serif;
+  text-decoration: none!important;
+}
+
 
 #limheight {
     margin-top: 70px;
@@ -23,6 +35,7 @@
     border-style: solid;
     margin: 0 auto;
     width: 90%;
+    background-color: white;
 
 }
 
