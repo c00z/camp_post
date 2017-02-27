@@ -50,9 +50,13 @@ class CampsitesController < ApplicationController
 
 
 
-
   def index
     @campsites = Campsite.all
+    if params[:search]
+        @campsites = Campsite.search(params[:search])
+      else
+        @campsites = Campsite.all.order('created_at DESC')
+    end
     @campsites = @campsites.paginate(:page => params[:page], :per_page => 30, :total_entries => 60)
   end
 
