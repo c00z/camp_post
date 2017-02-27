@@ -37,11 +37,26 @@ class CampsitesController < ApplicationController
       # natpark.save
     end
 
+    p "THIS IS CAMPSITE ARRAY"
+    p @campsite_array
+    p "THIS IS LOCATIONS ARRAY"
+    p @locations_array
+
+    # obj_array = Array.new[60] { |i| {loc}}
+    #   @locations_array.each_with_index |loc, i|
+    #   obj_array[i] = {location: loc, name: campsite_array[i]}
+    #
+    #   p obj_array
 
 
 
   def index
     @campsites = Campsite.all
+    if params[:search]
+        @campsites = Campsite.search(params[:search])
+      else
+        @campsites = Campsite.all.order('created_at DESC')
+    end
     @campsites = @campsites.paginate(:page => params[:page], :per_page => 30, :total_entries => 60)
   end
 
