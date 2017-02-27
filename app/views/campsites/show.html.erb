@@ -3,7 +3,9 @@
   <h1> <%= @campsites.name %></h1>
   <h4><%= @campsites.location %></h4>
 
-
+  <div class="left-align">
+    <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn-large" id="googleMaps"><i class="material-icons left">navigation</i>Directions</a>
+  </div>
   <!-- BOOKMARK -->
   <% if !current_user %>
     <%= form_for([@campsites, @campsites.users.build]) do |f| %>

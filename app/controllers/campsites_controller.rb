@@ -37,6 +37,17 @@ class CampsitesController < ApplicationController
       # natpark.save
     end
 
+    p "THIS IS CAMPSITE ARRAY"
+    p @campsite_array
+    p "THIS IS LOCATIONS ARRAY"
+    p @locations_array
+
+    # obj_array = Array.new[60] { |i| {loc}}
+    #   @locations_array.each_with_index |loc, i|
+    #   obj_array[i] = {location: loc, name: campsite_array[i]}
+    #
+    #   p obj_array
+
 
 
 
