@@ -1,3 +1,67 @@
 // Place all the styles related to the campsites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.campsiteindex-img {
+  background-image: url("forest.png");
+  width: 100%;
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin-top: -15px;
+  font-family: 'Bree Serif', serif;
+  text-decoration: none!important;
+}
+
+h5 {
+  // margin-top: 50px;
+  padding: 2px;
+}
+
+.pagination {
+  font-size: 35px;
+  text-align: center;
+  text-decoration: none!important;
+  color: white;
+  font-family: 'Bree Serif', serif;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#limheight {
+    margin-top: 90px;
+    height: 600px;
+    -webkit-column-count: 5;
+    -moz-column-count: 3;
+    column-count: 4; /*3 is just placeholder -- can be anything*/
+    box-sizing: border-box;
+    /*border-radius: 25%;*/
+   // 	border: 5px solid #000;
+   	/*background: #000;*/
+    display: block;
+    position: relative;
+    // left: 10%;
+    border-color: blacks;
+    border-width: 4px;
+    border-style: solid;
+    margin: 0 auto;
+    width: 90%;
+    background-color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#limheight h5 {
+    text-decoration: none !important;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+
+#limheight h5:hover {
+  background-color: grey;
+  opacity: .5;
+}
