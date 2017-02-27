@@ -41,3 +41,26 @@ a {
   background-color: white;
   margin: 30px;
 }
+
+#Loginpagebackground {
+  background-image: url("map.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  margin-top: -25px;
+}
+
+#loginpage {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  top: 28%;
+  left: 25%;
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  z-index: 15;
+  margin: -100px 0 0 -150px;
+}
