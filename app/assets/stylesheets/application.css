@@ -81,5 +81,10 @@ a {
 #formhead {
   color: white;
   text-align: center;
+}
 
+#buttonz {
+  background-color: #8bc34a;
+  border-radius: 15px;
+  font-size: 20px;
 }

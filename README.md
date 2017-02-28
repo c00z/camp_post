@@ -58,9 +58,9 @@ end
 ## Trello Board
 [Wireframes, Database models & Sprint Planning](https://trello.com/b/O2z9teqw/project-2)
 
-### Contributors
+## Contributors
 [Zach Cusimano](https://github.com/c00z)
 
-### Resources
+## Resources
 [Nokogiri as a Web Scraper](https://medium.com/loriscode/nokogiri-wikipedia-scraping-4eb4e809b0a4#.rm8naz87a)<br>
 [Search in Rails](https://medium.com/loriscode/search-for-rails-b7aec9d9d0c0#.y2cwolyvp)
