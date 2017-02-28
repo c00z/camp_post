@@ -14,10 +14,6 @@
   text-decoration: none!important;
 }
 
-h5 {
-  // margin-top: 50px;
-  padding: 2px;
-}
 
 .pagination {
   font-size: 35px;
@@ -35,28 +31,24 @@ h5 {
     -moz-column-count: 3;
     column-count: 3; /*3 is just placeholder -- can be anything*/
     box-sizing: border-box;
-    /*border-radius: 25%;*/
-   // 	border: 5px solid #000;
-   	/*background: #000;*/
     display: block;
     position: relative;
-    // left: 10%;
     border-color: blacks;
     border-width: 4px;
     border-style: solid;
     margin: 0 auto;
-    // width: 90%;
     background-color: white;
     text-align: center;
 }
 
-a {
+h5 a {
     color: black;
     text-decoration: none;
+    font-size: 28px;
 }
 
 #limheight h5 {
-    text-decoration: none !important;
+    text-decoration: none!important;
     display: inline-block;
     padding: 20px;
 }
@@ -73,5 +65,4 @@ a {
   width: 50%;
   border: 3px solid black;
   padding: 10px;
-
 }
