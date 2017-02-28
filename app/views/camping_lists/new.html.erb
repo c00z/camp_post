@@ -2,8 +2,8 @@
 <div id="listpage">
  <div class="container">
   <div class="row">
-    <div class="col s5">
-      <h3>New List for <%= @user.username %></h3>
+    <div class="col s5" id="listform">
+      <h3 id="formhead">New List for <%= @user.username %></h3>
       <%= form_for [@camping_lists], url: create_list_path do |f| %>
       <div>
         <%= f.text_field :item, placeholder: "Item" %>
