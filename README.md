@@ -4,7 +4,7 @@
 
 ## Camp_Post
 
-<i> Full Stack Rails App built for our my final WDI Project </i>
+<i> Full Stack Rails App built for the final WDI Project </i>
 
 Camp_Post was built as a way for those who enjoy camping and backpacking to share their experiences.
 
@@ -21,11 +21,11 @@ Allow admins to create and edit hackathon events. Automate team assignments equa
 #Entity-Relationship Diagram
 <img src="http://i.imgur.com/iAykvCf.png" width="800">
 
-###User table: Main database model for users and sessions
-###Campsite table: Stores all campsites information
-###CampingList table: Allows users to create and save camping lists
-###Review table: Stores reviews to both users and locations
-###CampsitesUser table: Allows users to bookmark campsites for future use
+####User table: Main database model for users and sessions
+####Campsite table: Stores all campsites information
+####CampingList table: Allows users to create and save camping lists
+####Review table: Stores reviews to both users and locations
+####CampsitesUser table: Allows users to bookmark campsites for future use
 
 #Technologies Used   
 
@@ -62,5 +62,5 @@ end
 [Zach Cusimano](https://github.com/c00z)
 
 ### Resources
-[Nokogiri as a Web Scraper](https://medium.com/loriscode/nokogiri-wikipedia-scraping-4eb4e809b0a4#.rm8naz87a)
+[Nokogiri as a Web Scraper](https://medium.com/loriscode/nokogiri-wikipedia-scraping-4eb4e809b0a4#.rm8naz87a)<br>
 [Search in Rails](https://medium.com/loriscode/search-for-rails-b7aec9d9d0c0#.y2cwolyvp)
