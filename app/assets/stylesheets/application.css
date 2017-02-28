@@ -47,9 +47,10 @@ a {
   left: 25%;
   position: absolute;
   width: 550px;
-  height: 600px;
+  height: 550px;
   z-index: 15;
   margin: -100px 0 0 -150px;
+  font-family: 'Bree Serif', serif;
 }
 
 #Loginpagebackground {
@@ -74,4 +75,5 @@ a {
   height: 450px;
   z-index: 15;
   margin: -100px 0 0 -150px;
+  font-family: 'Bree Serif', serif;
 }
