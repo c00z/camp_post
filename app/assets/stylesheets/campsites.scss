@@ -14,10 +14,6 @@
   text-decoration: none!important;
 }
 
-h5 {
-  // margin-top: 50px;
-  padding: 2px;
-}
 
 .pagination {
   font-size: 35px;
@@ -29,35 +25,33 @@ h5 {
 }
 
 #limheight {
-    margin-top: 90px;
-    height: 600px;
-    -webkit-column-count: 5;
-    -moz-column-count: 3;
-    column-count: 4; /*3 is just placeholder -- can be anything*/
-    box-sizing: border-box;
-    /*border-radius: 25%;*/
-   // 	border: 5px solid #000;
-   	/*background: #000;*/
-    display: block;
-    position: relative;
-    // left: 10%;
-    border-color: blacks;
-    border-width: 4px;
-    border-style: solid;
-    margin: 0 auto;
-    width: 90%;
-    background-color: white;
+  margin-top: 40px;
+  height: 400px;
+  -webkit-column-count: 5;
+  -moz-column-count: 3;
+  column-count: 3; /*3 is just placeholder -- can be anything*/
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  border-color: blacks;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  background-color: #424242;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+h5 a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
 }
 
 #limheight h5 {
-    text-decoration: none !important;
-    display: inline-block;
-    padding-bottom: 20px;
+  text-decoration: none!important;
+  display: inline-block;
+  padding: 20px;
 }
 
 
@@ -67,10 +61,9 @@ a {
 }
 
 #searchbar {
-  background-color: white;
+  background-color: #424242;
   margin: auto;
-  width: 50%;
-  border: 3px solid black;
+  width: 100%;
+  border: 1px solid black;
   padding: 10px;
-
 }

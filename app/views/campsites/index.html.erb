@@ -6,7 +6,7 @@
   <div class="col s5 center" id="searchbar">
     <%= form_tag(campsites_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Parks" %>
-    <%= submit_tag "Search", class: "btn btn-danger pic-large" %>
+    <%= submit_tag "Search", class: "btn btn-danger pic-large", id:"buttonz" %>
     <% end %>
     <% if @campsites.present? %>
     <!-- <%=  @campsites %> -->
