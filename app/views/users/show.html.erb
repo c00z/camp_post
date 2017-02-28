@@ -2,19 +2,19 @@
 <div class="container">
   <div class="row">
 
-    <div class="col s2">
+    <div class="col s3">
       <h4><%= @user.username %></h4>
       <h6>email: <%= @user.email %></h6>
       <h6>Reviews: <%= @user.reviews.length %></h6>
       <h6>Member Since:</strong> &nbsp; <%= @user.created_at.strftime("%b %Y") %></h6>
 
       <% if current_user == @user %>
-      <p class="left-align"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ' %></p>
+      <p class="left-align"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ', :id => "buttonz" %></p>
       <% end %>
     </div>
       <br>
 
-    <div class="col s10">
+    <div class="col s9">
       <div class="card">
          <div class="card-content profile-gif">
            <!-- <img src="./images/fire.gif"> -->
