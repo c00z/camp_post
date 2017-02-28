@@ -57,7 +57,7 @@ class CampsitesController < ApplicationController
       else
         @campsites = Campsite.all
     end
-    @campsites = @campsites.paginate(:page => params[:page], :per_page => 15, :total_entries => 60)
+    @campsites = @campsites.paginate(:page => params[:page], :per_page => 12, :total_entries => 60)
   end
 
 
