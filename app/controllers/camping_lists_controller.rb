@@ -15,6 +15,7 @@ class CampingListsController < ApplicationController
     @camping_lists = CampingList.create(post_params)
     new_list.user = current_user
     @camping_lists = new_list.save
+    redirect_to user_path(params[:id])
   end
 
   def new
@@ -26,7 +27,7 @@ class CampingListsController < ApplicationController
 
   private
   def post_params
-    params.require(:camping_lists).permit(:item)
+    params.require(:camping_list).permit(:item)
   end
 
 end
