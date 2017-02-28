@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update'
   # Lists ROUTES
   get '/users/:id/list' => 'camping_lists#index', as: 'lists'
+  get '/users/:id/list/new' => 'camping_lists#new', as: 'new_list'
+  post '/users/:id/list' => 'camping_lists#create', as: 'create_list'
+
 
   # CAMPSITE ROUTES
   get '/campsites' => 'campsites#index', as: 'campsites'

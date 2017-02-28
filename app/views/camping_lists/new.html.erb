@@ -1,0 +1,15 @@
+<!-- USERS CAMPING LIST -->
+
+
+<div class="col s8 push-s1">
+  <h3>New List for <%= @user.username %></h3>
+  <%= form_for [@camping_lists], url: create_list_path do |f| %>
+  <div>
+    <%= f.text_field :item, placeholder: "Item" %>
+  </div>
+  </div>
+  <div class="col s6 push-s4">
+    <a class="waves-effect waves-light btn"><%= f.submit "Submit"%></a>
+  </div>
+    <% end %>
+</div>

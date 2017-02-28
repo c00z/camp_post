@@ -57,6 +57,10 @@
              <label for="filled-in-box"><%= "#{p.item}"%></label>
              <br>
              <% end %>
+             <% if current_user == @user %>
+             <br>
+             <p class="left-align"><%= link_to "ADD ",  new_list_path(@user), :class => 'waves-effect waves-light btn ', :id => "buttonz" %></p>
+             <% end %>
            </div>
          </div>
        </div>
