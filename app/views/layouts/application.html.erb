@@ -21,21 +21,21 @@
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
-            <%= link_to('Campsites', campsites_path) %>
+            <%= link_to('campsites', campsites_path) %>
             </li>
               <% if user_signed_in? %>
             <li>
-            <%= link_to('Profile', user_path(current_user)) %>
+            <%= link_to('profile', user_path(current_user)) %>
             </li>
             <li>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              <%= link_to('logout', destroy_user_session_path, :method => :delete) %>
             </li>
           <% else %>
             <li>
-            <%= link_to('Login', login_path)  %>
+            <%= link_to('login', login_path)  %>
             </li>
             <li>
-              <%= link_to('Sign up', signup_path)  %>
+              <%= link_to('sign up', signup_path)  %>
             </li>
           <% end %>
       </ul>
