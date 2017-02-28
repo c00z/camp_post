@@ -15,6 +15,9 @@
  *= require materialize
  */
 
+nav li a {
+  font-size: 22px!important;
+}
 
 #navbar {
    background-color: black;
@@ -28,4 +31,60 @@
   height: 800px;
   margin-top: -25px;
 
+}
+
+a {
+  text-decoration: none!important;
+}
+
+/*sigup page box*/
+#loginform {
+  background-color: #424242;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  top: 28%;
+  left: 25%;
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  z-index: 15;
+  margin: -100px 0 0 -150px;
+  font-family: 'Bree Serif', serif;
+}
+
+#Loginpagebackground {
+  background-image: url("map.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  margin-top: -25px;
+}
+
+/*login page box*/
+#loginpage {
+  background-color: #424242;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  top: 28%;
+  left: 25%;
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  z-index: 15;
+  margin: -100px 0 0 -150px;
+  font-family: 'Bree Serif', serif;
+}
+
+#formhead {
+  color: white;
+  text-align: center;
+}
+
+#buttonz {
+  background-color: #8bc34a;
+  border-radius: 15px;
+  font-size: 20px;
 }

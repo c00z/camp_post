@@ -2,19 +2,19 @@
 <div class="container">
   <div class="row">
 
-    <div class="col s2">
+    <div class="col s3">
       <h4><%= @user.username %></h4>
-      <h6>email: <%= @user.email %></h6>
+      <h6><%= @user.email %></h6>
       <h6>Reviews: <%= @user.reviews.length %></h6>
       <h6>Member Since:</strong> &nbsp; <%= @user.created_at.strftime("%b %Y") %></h6>
 
       <% if current_user == @user %>
-      <p class="left-align"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ' %></p>
+      <p class="left-align"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ', :id => "buttonz" %></p>
       <% end %>
     </div>
       <br>
 
-    <div class="col s10">
+    <div class="col s9">
       <div class="card">
          <div class="card-content profile-gif">
            <!-- <img src="./images/fire.gif"> -->
@@ -27,29 +27,28 @@
            </ul>
          </div>
 
-         <div class="card-content grey lighten-4">
+         <div class="card-content grey lighten-2">
            <div id="reviews">
-             <p>my reviews </p>
              <% @user.reviews.each do |p| %>
              <div class="row hoverable posts-background">
                <div class="col s10">
                  <h4><%= link_to "#{p.title}", review_path(p)%></h4>
                  <p><%=p.created_at.strftime("%b %d, %Y")%></p>
-                 <p style="margin-bottom: 40px;"><%= truncate p.description, length: 160 %></p>
+                 <p style="margin-bottom: 20px;"><%= truncate p.description, length: 160 %></p>
                </div>
              </div>
              <% end %>
            </div>
 
            <div id="bookmarks">
-             <p>my bookmarks </p>
              <% @user.campsites.each do |p| %>
-             <div>
+             <div class="row hoverable posts-background">
+               <div class="col s10">
                <h4><%= link_to "#{p.name}", campsite_path(p)%></h4>
-               <p><%=p.created_at.strftime("%b %d, %Y")%></p>
+               <p>Added on: <%=p.created_at.strftime("%b %d, %Y")%></p>
              </div>
+           </div>
              <% end %>
-
            </div>
 
            <div id="camping_list">

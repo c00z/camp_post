@@ -17,6 +17,10 @@ class CampingListsController < ApplicationController
     @user = User.find_by_id(params[:id])
   end
 
+  def new
+
+  end
+
 
   private
   def list_params
