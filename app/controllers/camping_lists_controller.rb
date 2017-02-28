@@ -1,15 +1,20 @@
 class CampingListsController < ApplicationController
 
   def index
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @camping_lists = @user.camping_lists
   end
 
+  def show
+    @camping_lists = CampingList.find_by_id(params[:id])
+  end
+
   def create
-    new_list = List.new(list_params)
+    new_list = CampingList.new(post_params)
     @user = User.find_by_id(params[:id])
-    @camping_lists = CampingList.create(list_params)
+    @camping_lists = CampingList.create(post_params)
     new_list.user = current_user
+    @camping_lists = new_list.save
   end
 
   def new
@@ -20,7 +25,7 @@ class CampingListsController < ApplicationController
 
 
   private
-  def list_params
+  def post_params
     params.require(:camping_lists).permit(:item)
   end
 
