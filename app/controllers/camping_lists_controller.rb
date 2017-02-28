@@ -13,13 +13,10 @@ class CampingListsController < ApplicationController
   end
 
   def new
-    @camping_lists = List.new
+    @camping_lists = CampingList.new
     @user = User.find_by_id(params[:id])
   end
 
-  def new
-
-  end
 
 
   private
