@@ -22,10 +22,11 @@ nav li a {
 
 #navbar {
    background-color: black;
+   height: 75px;
  }
 
 #signuppage {
-  background-image: url(mountains.jpg);
+  background-image: url(map.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -88,4 +89,8 @@ a {
   background-color: #8bc34a;
   border-radius: 15px;
   font-size: 20px;
+}
+
+#toast-container{
+  top: 80px;
 }
