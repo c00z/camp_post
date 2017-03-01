@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 
+
   def index
     @user = User.find(params[:user_id])
     @campsites = @user.campsites
@@ -8,6 +9,8 @@ class ReviewsController < ApplicationController
   def show
     @review = Review.find_by_id(params[:id])
   end
+
+  before_action :authenticate_user!
 
   def create
     new_review = Review.new(post_params)

@@ -9,7 +9,6 @@
         <%= submit_tag "Search", class: "btn btn-danger pic-large", id:"buttonz" %>
         <% end %>
         <% if @campsites.present? %>
-        <!-- <%=  @campsites %> -->
         <% else %>
           <p>There are no campsites containing the term(s) <%= params[:search] %>.</p>
         <% end %>
