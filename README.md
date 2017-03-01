@@ -19,7 +19,7 @@ See the published project at [camp-post.herokuapp.com/](https://camp-post.heroku
 Allow admins to create and edit hackathon events. Automate team assignments equally based on students selected class. Add the ability for ideas to contain multimedia.  
 
 #Entity-Relationship Diagram
-<img src="http://i.imgur.com/Vj6lqG6.png" width="800">
+<img src="http://i.imgur.com/Ob1HFL7.png" width="800">
 
 User table: Main database model for users and sessions
 Campsite table: Stores all campsites information
