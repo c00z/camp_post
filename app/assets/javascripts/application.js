@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 //= require materialize
 //= require jquery.raty
 //= require ratyrate
+//= require toastr
