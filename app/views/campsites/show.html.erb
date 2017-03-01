@@ -1,14 +1,11 @@
 <!-- Show one campsite -->
 <div class="container">
   <h1> <%= @campsites.name %></h1>
-  <h4>camping  : <%= rating_for @campsites, 'camping', star: 5, cancel: true %></h4>
+  <h6><%= rating_for @campsites, 'camping', star: 5, cancel: true %></h6>
   <br>
 
-  <div class="left-align">
-    <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn" id="buttonz">Directions</a>
-  </div>
 
-  <br>
+
   <!-- BOOKMARK -->
   <% if !current_user %>
     <%= form_for([@campsites, @campsites.users.build]) do |f| %>
@@ -24,7 +21,10 @@
       <% end %>
     <% end %>
   <% end %>
-
+  <br>
+  <div class="left-align">
+    <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn" id="buttonz">Directions</a>
+  </div>
 
   <!-- Add new Review -->
   <div class="col m2 offset-m1">
