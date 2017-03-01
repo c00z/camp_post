@@ -12,3 +12,24 @@
   background-position: center;
   // background-color: black;
 }
+
+#editprofilepage {
+  background-image: url("map.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 750px;
+  margin-top: -25px;
+  align-content: center;
+}
+
+#editprofileform {
+  background-color: #424242;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 100px;;
+}
