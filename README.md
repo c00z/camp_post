@@ -19,13 +19,14 @@ See the published project at [camp-post.herokuapp.com/](https://camp-post.heroku
 Allow admins to create and edit hackathon events. Automate team assignments equally based on students selected class. Add the ability for ideas to contain multimedia.  
 
 #Entity-Relationship Diagram
-<img src="http://i.imgur.com/iAykvCf.png" width="800">
+<img src="http://i.imgur.com/Vj6lqG6.png" width="800">
 
-####User table: Main database model for users and sessions
-####Campsite table: Stores all campsites information
-####CampingList table: Allows users to create and save camping lists
-####Review table: Stores reviews to both users and locations
-####CampsitesUser table: Allows users to bookmark campsites for future use
+User table: Main database model for users and sessions
+Campsite table: Stores all campsites information
+CampingList table: Allows users to create and save camping lists
+Review table: Stores reviews to both users and locations
+CampsitesUser table: Allows users to bookmark campsites for future use
+Rate, Cache, & Overall Average tables: Allow users to rate campsites
 
 #Technologies Used   
 
@@ -38,16 +39,28 @@ Rails
 
 
 ## Code I'm Proud Of...
-This piece of code creates our RSVP feature on the event show page.
+This piece of code created the web scraper used to pull in all National Park names.
 <hr>
 ```ruby
-#event_user controller
-def build
-    @event = Event.friendly.find(params[:event_id])
-    @user = current_user
-    @event.users << @user
-    redirect_to :back
+#campsites_controller
+wiki_url = "https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States"
+page = Nokogiri::HTML(open(wiki_url))
+
+campsites = page.css("tr th a")
+@campsite_array = []
+campsites.map do |a|
+  campsite_name = a.text
+  @campsite_array.push(campsite_name)
 end
+@campsite_array[4...63].each do |el|
+  natpark = Campsite.find_or_create_by(name: el)
+end
+
+#campsites_show
+<%  @campsites[0...63].each do |p| %>
+  <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
+  <br>
+<% end % >
 
 ```
 
