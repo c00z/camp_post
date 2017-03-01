@@ -81,4 +81,5 @@ end
 
 ## Resources
 [Nokogiri as a Web Scraper](https://medium.com/loriscode/nokogiri-wikipedia-scraping-4eb4e809b0a4#.rm8naz87a)<br>
-[Search in Rails](https://medium.com/loriscode/search-for-rails-b7aec9d9d0c0#.y2cwolyvp)
+[Search in Rails](https://medium.com/loriscode/search-for-rails-b7aec9d9d0c0#.y2cwolyvp)<br>
+[Rating System](https://www.sitepoint.com/ratyrate-add-rating-rails-app/)
