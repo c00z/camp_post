@@ -16,3 +16,4 @@
 //= require materialize
 //= require jquery.raty
 //= require ratyrate
+//= require toastr
