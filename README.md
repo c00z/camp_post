@@ -1,4 +1,4 @@
-# Camp_Post - [Live Link](google.com/)
+# Camp_Post - [Live Link](https://camp-post.herokuapp.com/)
 
 <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="100">
 
@@ -12,7 +12,7 @@ Users will be able to create a profile, create new reviews, bookmark future trip
 
 Feel free to fork / star / watch for your own personal use.
 
-See the published project at [xxxxx.herokuapp.com](https://ga-hackathon.herokuapp.com/)!
+See the published project at [camp-post.herokuapp.com/](https://camp-post.herokuapp.com/)!
 
 ## Future Development
 
