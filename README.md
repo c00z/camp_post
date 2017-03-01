@@ -22,10 +22,15 @@ Allow admins to create and edit hackathon events. Automate team assignments equa
 <img src="http://i.imgur.com/Ob1HFL7.png" width="800">
 
 User table: Main database model for users and sessions
+
 Campsite table: Stores all campsites information
+
 CampingList table: Allows users to create and save camping lists
+
 Review table: Stores reviews to both users and locations
+
 CampsitesUser table: Allows users to bookmark campsites for future use
+
 Rate, Cache, & Overall Average tables: Allow users to rate campsites
 
 #Technologies Used   
