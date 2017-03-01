@@ -1,7 +1,7 @@
 <!-- Show one campsite -->
 <div class="container">
   <h1> <%= @campsites.name %></h1>
-  <h4>camping  : <%= rating_for @campsites, 'camping', star: 5 %></h4>
+  <h4>camping  : <%= rating_for @campsites, 'camping', star: 5, cancel: true %></h4>
   <br>
 
   <div class="left-align">
