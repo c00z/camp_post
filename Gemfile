@@ -10,6 +10,8 @@ end
 
 gem 'ffaker'
 
+gem 'ratyrate'
+
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'materialize-sass'

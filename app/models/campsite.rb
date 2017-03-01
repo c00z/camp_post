@@ -7,4 +7,7 @@ class Campsite < ApplicationRecord
     where("name ILIKE ?", "%#{search}%")
   end
 
+  ratyrate_rateable "camping"
+
+
 end
