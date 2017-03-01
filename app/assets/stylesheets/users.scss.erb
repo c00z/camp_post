@@ -5,7 +5,7 @@
 
 .profile-gif {
   // position: relative;
-  background-image: url("forest2.gif");
+  background-image: url(<%= asset_path "forest2.gif" %>);
   max-width: 100%;
   height: 300px;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 }
 
 #editprofilepage {
-  background-image: url("map.jpg");
+  background-image: url("<%= asset_path "map.jpg" %>");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
