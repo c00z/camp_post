@@ -4,22 +4,22 @@
   <h4><%= @campsites.location %></h4>
 
   <div class="left-align">
-    <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn">Directions</a>
+    <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn" id="buttonz">Directions</a>
   </div>
 
   <br>
   <!-- BOOKMARK -->
   <% if !current_user %>
     <%= form_for([@campsites, @campsites.users.build]) do |f| %>
-    <%= f.submit "Bookmark", class: "btn btn-danger pic-large" %>
+    <%= f.submit "Bookmark", class: "btn btn-danger pic-large", id: "buttonz" %>
    <% end %>
   <% else %>
     <%= form_for([@campsites, @campsites.users.build]) do |f| %>
     <% f.hidden_field :user_id, value: current_user.id %>
     <% if @campsites.users.include? current_user %>
-      <%= f.submit "Woo!!", class: "btn btn-danger pic-large", disabled: "true" %>
+      <%= f.submit "Woo!!", class: "btn btn-danger pic-large", id: "buttonz", disabled: "true" %>
       <% else %>
-        <%= f.submit "Bookmark!", class: "btn btn-danger pic-large" %>
+        <%= f.submit "Bookmark!", class: "btn btn-danger pic-large", id: "buttonz" %>
       <% end %>
     <% end %>
   <% end %>
@@ -31,7 +31,7 @@
       <h4 class="col s12 adventure-text">Tell us your <%=@campsites.name%> story!</h4>
     </div>
     <div class="row">
-      <%= link_to "New Review", new_review_path(@campsites), class:"btn col s12 button-color"%>
+      <%= link_to "New Review", new_review_path(@campsites), class:"btn col s12 button-color", id: "buttonz"%>
     </div>
 
   <!-- Review lists -->
