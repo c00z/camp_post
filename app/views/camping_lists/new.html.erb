@@ -1,0 +1,20 @@
+<!-- USERS CAMPING LIST -->
+<div id="listpage">
+ <div class="container">
+  <div class="row">
+    <div class="col s5" id="listform">
+      <h3 id="formhead">New List for <%= @user.username %></h3>
+      <%= form_for [@camping_lists], url: create_list_path do |f| %>
+      <div>
+        <%= f.text_field :item, placeholder: "Item" %>
+      </div>
+      <div class="col s6 push-s4">
+        <a class="waves-effect waves-light btn" id="buttonz"><%= f.submit "Submit"%></a>
+      </div>
+        <% end %>
+      </div>
+      <div class="col s7 push-s1" id="gearimg">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<!-- CAMPSITES INDEX -->
+<div class="campsiteindex-img">
+  <div class="container">
+    <div class="campindexcontainer">
+      <!-- Search Form -->
+      <div class="col s5 center" id="searchbar">
+        <%= form_tag(campsites_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Parks" %>
+        <%= submit_tag "Search", class: "btn btn-danger pic-large", id:"buttonz" %>
+        <% end %>
+        <% if @campsites.present? %>
+        <!-- <%=  @campsites %> -->
+        <% else %>
+          <p>There are no campsites containing the term(s) <%= params[:search] %>.</p>
+        <% end %>
+      </div>
+
+
+    <!-- Campsite Lists -->
+      <div class="col s12" id= "limheight">
+        <%  @campsites[0...63].each do |p| %>
+          <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
+          <br>
+        <% end %>
+      </div>
+      <div class="col s5 pull-s5">
+        <%= will_paginate  %>
+      </div>
+    </div>
+  </div>
+</div>
