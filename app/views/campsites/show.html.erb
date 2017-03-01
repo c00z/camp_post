@@ -1,7 +1,7 @@
 <!-- Show one campsite -->
 <div class="container">
   <h1> <%= @campsites.name %></h1>
-  <h4><%= @campsites.location %></h4>
+  <h4>camping  : <%= rating_for @campsites, 'camping' %></h4>
 
   <div class="left-align">
     <a href="https://www.google.com/maps/dir/here/<%=@campsites.name%>+National+Park" target="_blank" class="waves-effect waves-light btn" id="buttonz">Directions</a>
