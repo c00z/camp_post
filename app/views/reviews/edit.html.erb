@@ -1,18 +1,25 @@
 <!-- EDIT Reviews -->
+<div id="listpage">
+  <div class="container">
+    <br>
+    <br>
+    <div class="col s8" id="editreview">
+      <h2 id="formhead"><%= @review.title %></h2>
+      <h4>By <%= link_to "#{@review.user.username}", user_path(current_user) %></h4>
 
-  <h2><%= @review.title %></h2>
-  <h4>By <%= link_to "#{@review.user.username}", user_path(current_user) %></h4>
 
+      <div class="row">
 
-  <div class="row">
-
-    <%= form_for @review do |f| %>
-      <div>
-        <%= f.text_area :title, placeholder: "Title", class: "materialize-textarea" %>
+        <%= form_for @review do |f| %>
+          <div>
+            <%= f.text_area :title, placeholder: "Title", class: "materialize-textarea" %>
+          </div>
+          <div>
+            <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea" %>
+          </div>
+          <a class="waves-effect waves-light btn" id="buttonz"><%= f.submit "Submit" %></a>
+        <% end %>
       </div>
-      <div>
-        <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea" %>
-      </div>
-      <a class="waves-effect waves-light btn"><%= f.submit "Submit" %></a>
-    <% end %>
+    </div>
   </div>
+</div>

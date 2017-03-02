@@ -8,17 +8,17 @@ class CampsitesController < ApplicationController
     page = Nokogiri::HTML(open(wiki_url))
 
     # SCRAPING NATIONAL LOCATION
-    locations = page.css("tr td small span a span span span.geo-dec")
-    @locations_array = []
-    locations.map do |el|
-      campsite_loc = el.text
-      @locations_array.push(campsite_loc)
-    end
-    @locations_array.each do |x|
-      p "THIS IS LOCATIONNNN"
-      p x
-      natpark_loc = Campsite.find_or_create_by(location: x)
-    end
+    # locations = page.css("tr td small span a span span span.geo-dec")
+    # @locations_array = []
+    # locations.map do |el|
+    #   campsite_loc = el.text
+    #   @locations_array.push(campsite_loc)
+    # end
+    # @locations_array.each do |x|
+    #   p "THIS IS LOCATIONNNN"
+    #   p x
+    #   natpark_loc = Campsite.find_or_create_by(location: x)
+    # end
 
     # SCRAPING NATIONAL PARK NAME
     campsites = page.css("tr th a")

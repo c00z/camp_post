@@ -4,7 +4,7 @@
 
 
 .home-img {
-  background-image: url("campsitehero.jpg");
+  background-image: url("<%= asset_path "campsitehero.jpg" %>");
   width: 100%;
   height: 700px;
   background-attachment: fixed;
@@ -16,8 +16,7 @@
 }
 
 .home-gif {
-  // position: relative;
-  background-image: url("fire.gif");
+  background-image: url("<%= asset_path "fire.gif" %>");
   max-width: 100%;
   height: 270px;
   background-repeat: no-repeat;
@@ -31,7 +30,7 @@
 }
 
 .home-img2 {
-  background-image: url("cameron.jpg");
+  background-image: url("<%= asset_path "cameron.jpg" %>");
   width: 100%;
   height: 450px;
   background-attachment: fixed;
