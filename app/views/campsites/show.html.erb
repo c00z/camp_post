@@ -5,7 +5,6 @@
       <!-- LEFT PROFILE BAR -->
       <div class="col s4">
         <h2> <%= @campsites.name %></h2>
-        <!-- <h6><%= rating_for @campsites, 'camping', star: 5, cancel: true %></h6> -->
         <h6><%= rating_for @campsites, 'camping', disable_after_rate: true, imdb_avg: true %></h6>
         <br>
 
