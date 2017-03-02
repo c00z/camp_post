@@ -3,7 +3,7 @@
  <div class="container">
   <div class="row">
 
-    <div class="col s3">
+    <div class="col s3" id="userinfo">
       <h4><%= @user.username %></h4>
       <h6><%= @user.email %></h6>
       <h6>Reviews: <%= @user.reviews.length %></h6>
@@ -16,12 +16,12 @@
       <br>
 
     <div class="col s9">
-      <div class="card">
+      <div class="card" id="usercard">
          <div class="card-content profile-gif">
            <!-- <img src="./images/fire.gif"> -->
          </div>
-         <div class="card-tabs">
-           <ul class="tabs tabs-fixed-width">
+         <div class="card-tabs" id="usercard">
+           <ul class="tabs tabs-fixed-width" id="usercard">
              <li class="tab"><a href="#reviews">Reviews</a></li>
              <li class="tab"><a class="active" href="#bookmarks">Bookmarks</a></li>
              <li class="tab"><a href="#camping_list">Camping List</a></li>
