@@ -33,17 +33,18 @@
       </div>
 
       <!-- Add new Review -->
-      <div class="col s8">
+      <div class="col s9">
         <br>
-        <h2 id="reviewheader">Tell us your <%=@campsites.name%> story!</h2>
+        <h2 id="reviewheader">Tell us your <u><%=@campsites.name%></u> story!</h2>
 
       <!-- Review lists -->
         <% @campsites.reviews.each do |p| %>
           <div class="row hoverable">
-            <div class="col s7 offset-s1">
-              <h4><%= link_to "#{p.title}", review_path(p), class:"review-title"%></h3>
-              <h5>Written by <%= p.user.username %> on <%=p.created_at.strftime("%b %d, %Y")%></h5>
-              <p><%= truncate p.description, length: 160  %></p>
+            <div class="col s9 offset-s1" id="reviewlist">
+              <h3><%= link_to "#{p.title}", review_path(p), class:"review-title"%></h3>
+              <h5>From <%= p.user.username %> </h5>
+              <h5> <%=p.created_at.strftime("%b %d, %Y")%></h5>
+              <h6><%= truncate p.description, length: 160  %></h6>
             </div>
           </div>
         <% end %>
