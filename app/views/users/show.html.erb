@@ -10,7 +10,7 @@
       <h6>Member Since:</strong> &nbsp; <%= @user.created_at.strftime("%b %Y") %></h6>
 
       <% if current_user == @user %>
-      <p class="left-align"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ', :id => "buttonz" %></p>
+      <p class="center"><%= link_to "edit ",  edit_user_path(@user), :class => 'waves-effect waves-light btn ', :id => "buttonz" %></p>
       <% end %>
     </div>
       <br>
