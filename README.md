@@ -8,7 +8,7 @@
 
 Camp_Post was built as a way for those who enjoy camping and backpacking to share their experiences.
 
-Users will be able to create a profile, create new reviews, bookmark future trips and create a camping list.
+Users will be able to create a profile, create new reviews, bookmark future trips, search national parks, rate campsites and create a camping list.
 
 Feel free to fork / star / watch for your own personal use.
 
@@ -16,7 +16,15 @@ See the published project at [camp-post.herokuapp.com/](https://camp-post.heroku
 
 ## Future Development
 
-Allow admins to create and edit hackathon events. Automate team assignments equally based on students selected class. Add the ability for ideas to contain multimedia.  
+-Allow admins to create and edit new campsite locations.
+
+-Plot map all locations.
+
+-Allow users to add images to their reviews.
+
+-Sort by top rated campsites.
+
+-Utilize APIs for weather and twitter.
 
 #Entity-Relationship Diagram
 <img src="http://i.imgur.com/Ob1HFL7.png" width="800">
@@ -44,7 +52,7 @@ Rails
 
 
 ## Code I'm Proud Of...
-This piece of code created the web scraper used to pull in all National Park names.
+This piece of code created the web scraper used to pull in every National Park from Wikipedia.
 <hr>
 ```ruby
 #campsites_controller
@@ -67,7 +75,7 @@ end
   <br>
 <% end % >
 ```
-This piece of code allows for users to search within the campsite index.
+This piece of code allows for users to search the campsite index.
 <hr>
 ```ruby
 # campsites_controller
@@ -101,6 +109,9 @@ end
 ```
 ## Screen Shots
 <img src="http://i.imgur.com/DHyO7bj.jpg" width="600">
+<img src="http://i.imgur.com/Qle6qms.jpg" width="600">
+<img src="http://i.imgur.com/By7kEra.jpg" width="600">
+<img src="http://i.imgur.com/CWAqAfk.png" width="600">
 <hr>
 
 ## Trello Board
