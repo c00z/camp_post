@@ -66,15 +66,45 @@ end
   <h5><%= link_to "#{p.name}", campsite_path(p) %></h5>
   <br>
 <% end % >
+```
+This piece of code allows for users to search within the campsite index.
+<hr>
+```ruby
+# campsites_controller
+def index
+  @campsites = Campsite.all
+  # search functionality
+  if params[:search]
+      @campsites = Campsite.search(params[:search])
+    else
+      @campsites = Campsite.all
+  end
+  # pagination
+  @campsites = @campsites.paginate(:page => params[:page], :per_page => 12, :total_entries => 60)
+end
+
+# campsites model
+def self.search(search)
+  where("name ILIKE ?", "%#{search}%")
+end
+
+# campsites_index
+<%= form_tag(campsites_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Parks" %>
+<%= submit_tag "Search", class: "btn btn-danger pic-large", id:"buttonz" %>
+<% end %>
+<% if @campsites.present? %>
+<% else %>
+  <p>There are no campsites containing the term(s) <%= params[:search] %>.</p>
+<% end % >
 
 ```
-
 ## Screen Shots
 <img src="http://i.imgur.com/DHyO7bj.jpg" width="600">
 <hr>
 
 ## Trello Board
-[Wireframes, Database models & Sprint Planning](https://trello.com/b/O2z9teqw/project-2)
+[Wireframes, Database models & Sprint Planning](https://trello.com/b/HRMoxsHy/final-project)
 
 ## Contributors
 [Zach Cusimano](https://github.com/c00z)
@@ -82,4 +112,5 @@ end
 ## Resources
 [Nokogiri as a Web Scraper](https://medium.com/loriscode/nokogiri-wikipedia-scraping-4eb4e809b0a4#.rm8naz87a)<br>
 [Search in Rails](https://medium.com/loriscode/search-for-rails-b7aec9d9d0c0#.y2cwolyvp)<br>
+[Bookmarking Rails](https://medium.com/loriscode/bookmarking-feature-in-rails-28c31bf67abe#.ssa45bhtd)<br>
 [Rating System](https://www.sitepoint.com/ratyrate-add-rating-rails-app/)
