@@ -3,7 +3,7 @@
   <div class="container">
     <br>
     <br>
-    <div class="col s8" id="newreviewform">
+    <div class="col s8" id="editreview">
       <h2 id="formhead"><%= @review.title %></h2>
       <h4>By <%= link_to "#{@review.user.username}", user_path(current_user) %></h4>
 
@@ -17,7 +17,7 @@
           <div>
             <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea" %>
           </div>
-          <a class="waves-effect waves-light btn"><%= f.submit "Submit" %></a>
+          <a class="waves-effect waves-light btn" id="buttonz"><%= f.submit "Submit" %></a>
         <% end %>
       </div>
     </div>
