@@ -16,6 +16,8 @@ See the published project at [camp-post.herokuapp.com/](https://camp-post.heroku
 
 ## Future Development
 
+-Mobile responsive.
+
 -Allow admins to create and edit new campsite locations.
 
 -Plot map all locations.
