@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 
+  before_action :authenticate_user!, :only => [:create, :new]
 
   def index
     @user = User.find(params[:user_id])
@@ -10,7 +11,6 @@ class ReviewsController < ApplicationController
     @review = Review.find_by_id(params[:id])
   end
 
-  before_action :authenticate_user!
 
   def create
     new_review = Review.new(post_params)
