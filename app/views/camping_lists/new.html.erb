@@ -6,7 +6,7 @@
       <h3 id="formhead">New List for <%= @user.username %></h3>
       <%= form_for [@camping_lists], url: create_list_path do |f| %>
       <div>
-        <%= f.text_field :item, placeholder: "Item" %>
+        <%= f.text_field :item, placeholder: "Item", id: "form" %>
       </div>
       <div class="center">
         <a class="waves-effect waves-light btn" id="buttonz"><%= f.submit "Submit"%></a>

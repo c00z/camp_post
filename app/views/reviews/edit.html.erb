@@ -12,10 +12,10 @@
 
         <%= form_for @review do |f| %>
           <div>
-            <%= f.text_area :title, placeholder: "Title", class: "materialize-textarea" %>
+            <%= f.text_area :title, placeholder: "Title", id: "form" %>
           </div>
           <div>
-            <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea" %>
+            <%= f.text_area :description, placeholder: "Description", class: "materialize-textarea", id: "form" %>
           </div>
           <a class="waves-effect waves-light btn" id="buttonz"><%= f.submit "Submit" %></a>
         <% end %>
