@@ -30,6 +30,12 @@
         <br>
         <!-- ADD A REVIEWS -->
         <%= link_to "New Review", new_review_path(@campsites), class:"btn btn-danger pic-large", id: "buttonz"%>
+
+        <a class="twitter-timeline"  href="https://twitter.com/search?q=%3C%25%3D%40campsites.name%25%3E" data-widget-id="844996687110156289">Tweets about <%=@campsites.name%></a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
       </div>
 
       <!-- Add new Review -->
